@@ -4,9 +4,9 @@ import Menu from '@/components/header/Menu.vue'
 
 <template>
   <header class="header">
-    <a href="#" class="header__logo">
+    <RouterLink to="/" class="header__logo">
       <img class="header__img" src="../../assets/images/logo.svg" alt="Logo" />
-    </a>
+    </RouterLink>
     <Menu />
   </header>
 </template>

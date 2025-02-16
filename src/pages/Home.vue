@@ -1,5 +1,5 @@
 <script setup>
-import { onMounted, provide, reactive, ref, watch } from 'vue'
+import { computed, onMounted, provide, reactive, ref, watch } from 'vue'
 import axios from 'axios'
 
 import Product from '@/components/product/Product.vue'
@@ -9,6 +9,8 @@ const API = 'https://f0ad98f34d87a789.mokky.dev'
 const API_PRODUCTS = `${API}/products`
 
 const products = ref([])
+
+const favorites = ref([])
 
 const getData = async () => {
   const params = {
@@ -38,6 +40,10 @@ const updateSortBy = (value) => {
 const updateSearchQuery = (value) => {
   filters.searchQuery = value
 }
+
+// const addFavorite = (item) => {
+//   favorites.value.push(item)
+// }
 
 watch(filters, getData)
 

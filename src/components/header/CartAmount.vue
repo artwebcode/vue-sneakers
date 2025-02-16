@@ -1,7 +1,8 @@
 <script setup>
 import CartIcon from '@/components/icons/CartIcon.vue'
+import { inject } from 'vue'
 
-
+const { totalPrice } = inject('eventsProduct')
 </script>
 
 <template>
@@ -10,12 +11,8 @@ import CartIcon from '@/components/icons/CartIcon.vue'
       <CartIcon />
     </div>
 
-    <div class="amount__text">
-      1205 руб.
-    </div>
+    <div class="amount__text">${{ totalPrice }}</div>
   </div>
-
-
 </template>
 
 <style scoped lang="scss">
@@ -35,7 +32,7 @@ import CartIcon from '@/components/icons/CartIcon.vue'
     font-weight: 600;
     font-size: vc(14);
     line-height: vc(17);
-    color: #5C5C5C;
+    color: #5c5c5c;
   }
 }
 </style>
