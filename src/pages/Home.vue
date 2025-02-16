@@ -4,7 +4,9 @@ import axios from 'axios'
 
 import Product from '@/components/product/Product.vue'
 
-const API = 'https://604781a0efa572c1.mokky.dev/items'
+const API = 'https://f0ad98f34d87a789.mokky.dev'
+
+const API_PRODUCTS = `${API}/products`
 
 const products = ref([])
 
@@ -17,7 +19,7 @@ const getData = async () => {
     params.title = `*${filters.searchQuery}*`
   }
 
-  const { data } = await axios.get(API, {
+  const { data } = await axios.get(API_PRODUCTS, {
     params,
   })
 
