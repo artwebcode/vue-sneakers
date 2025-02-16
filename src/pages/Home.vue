@@ -16,7 +16,7 @@ const getData = async () => {
   }
 
   if (filters.searchQuery) {
-    params.title = `*${filters.searchQuery}*`
+    params.name = `*${filters.searchQuery}*`
   }
 
   const { data } = await axios.get(API_PRODUCTS, {

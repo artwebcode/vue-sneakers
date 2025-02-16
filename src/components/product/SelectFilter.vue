@@ -20,5 +20,7 @@ const { updateSortBy } = inject('updateFilter')
   border: 1px solid #f3f3f3;
   padding: vc(15) vc(18);
   width: vc(250);
+  font-size: vc(14);
+  color: $color-black;
 }
 </style>

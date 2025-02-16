@@ -12,8 +12,10 @@ defineProps({
   <div class="body">
     <div class="header">
       <div class="header__title">Все кроссовки</div>
-      <SelectFilter />
-      <Search />
+      <div class="header__filters">
+        <SelectFilter />
+        <Search />
+      </div>
     </div>
 
     <ProductList :products="products" />
@@ -37,6 +39,12 @@ defineProps({
     font-weight: 700;
     font-size: vc(32);
     line-height: vc(39);
+  }
+
+  &__filters {
+    display: flex;
+    align-items: center;
+    gap: vc(20);
   }
 }
 </style>
