@@ -6,6 +6,12 @@
   }
 }
 
+@mixin desktop-xxl-min {
+  @media (min-width: ($desktop-xxl * 1px)) {
+    @content;
+  }
+}
+
 @mixin desktop-xl {
   @media (max-width: ($desktop-xl - 1px)) {
     @content;
@@ -13,7 +19,7 @@
 }
 
 @mixin desktop-xl-min {
-  @media (min-width: ($desktop-xl - 1px)) {
+  @media (min-width: ($desktop-xl * 1px)) {
     @content;
   }
 }

@@ -15,7 +15,7 @@ defineProps({
     <div class="product__bottom">
       <div class="product-price">
         <p class="product-price__name">Цена:</p>
-        <div class="product-price__value">{{item.price}} руб.</div>
+        <div class="product-price__value">{{ item.price }} руб.</div>
       </div>
       <div class="product__add">
         <IconPlus />

@@ -19,6 +19,10 @@
         --width-current: 100vw;
     }
 
+    @include desktop-xxl-min {
+        --width-current: #{$desktop-xxl}px;
+    }
+
     @include devices {
         --width-base: 390; // dynamic value
         --width-current: 100vmin;
