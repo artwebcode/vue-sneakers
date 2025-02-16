@@ -1,0 +1,69 @@
+@use '@/scss/reset';
+@use "@/scss/variables" as *;
+@use "@/scss/fonts";
+@use '@/scss/function' as *;
+@use '@/scss/mixins/breakpoint' as *;
+@use '@/scss/vendor';
+@use '@/scss/common';
+
+:root {
+    --width-base: 1250; // dynamic value
+    --width-current: #{$desktop-xxl};
+    --width-multiplier: calc(var(--width-current) / var(--width-base));
+
+    @include desktop-xl-min {
+        --width-base: #{$desktop-md};
+    }
+
+    @include desktop-xxl {
+        --width-current: 100vw;
+    }
+
+    @include devices {
+        --width-base: 390; // dynamic value
+        --width-current: 100vmin;
+    }
+}
+
+html,
+body {
+    max-width: 100vw;
+    overflow-x: hidden;
+    font-family: $font-base;
+    font-weight: 400;
+    color: $color-black;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+svg {
+    width: 100%;
+    height: 100%;
+}
+
+.container {
+    width: 100%;
+    max-width: vc(1080);
+
+    @include devices {
+        max-width: 100%;
+        padding: 0 vc(16);
+    }
+}
+
+.for-desktop {
+    @include devices {
+        // stylelint-disable-next-line declaration-no-important
+        display: none !important;
+    }
+}
+
+.for-devices {
+    @include desktop {
+        // stylelint-disable-next-line declaration-no-important
+        display: none !important;
+    }
+}
