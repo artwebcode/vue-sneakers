@@ -1,5 +1,5 @@
 <script setup>
-import { computed, onMounted, provide, reactive, ref, watch } from 'vue'
+import { onMounted, provide, reactive, ref, watch } from 'vue'
 import axios from 'axios'
 
 import Product from '@/components/product/Product.vue'
@@ -10,7 +10,7 @@ const API_PRODUCTS = `${API}/products`
 
 const products = ref([])
 
-const favorites = ref([])
+// const favorites = ref([])
 
 const getData = async () => {
   const params = {
